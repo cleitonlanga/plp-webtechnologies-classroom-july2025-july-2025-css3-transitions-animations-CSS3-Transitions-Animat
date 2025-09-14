@@ -1,0 +1,128 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 40px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  animation: fadeInDown 1s ease;
+}
+
+/* Button with transition on hover */
+.animated-btn {
+  background: #3498db;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  margin: 20px auto;
+  display: block;
+}
+.animated-btn:hover {
+  background: #2ecc71;
+  transform: scale(1.1) rotate(-2deg);
+}
+
+/* Fade-in box using keyframes */
+.fade-box {
+  width: 300px;
+  height: 100px;
+  background: #fff;
+  margin: 30px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Sliding text using keyframes */
+.slide-text {
+  width: 320px;
+  margin: 30px auto;
+  font-size: 1.2em;
+  color: #333;
+  position: relative;
+  animation: slideRight 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+
+@keyframes slideRight {
+  from {
+    left: -100px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+/* Continuous spinning icon */
+.spin-icon {
+  display: block;
+  margin: 40px auto;
+  font-size: 2.5em;
+  color: #e67e22;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* FadeInDown for heading */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.js-box {
+  width: 100px;
+  height: 100px;
+  background: #4caf50;
+  margin: 20px 0;
+  transition: transform 0.5s;
+}
+
+.js-box.animated {
+  animation: bounce 0.7s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
